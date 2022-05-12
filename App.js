@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, LogBox } from "react-native";
+import { AuthProvider } from "./src/contexts/auth";
+import { initializeFirebase } from "./src/firebase/firebase";
+import Route from "./src/routes/route";
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
+  initializeFirebase();
+  LogBox.ignoreAllLogs()
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AuthProvider>
+      <StatusBar barStyle="light-content" />
+      <Route />
+    </AuthProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
