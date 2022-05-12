@@ -1,6 +1,6 @@
 <img src="./assets/Logo.png" alt="Logo of the project" align="right">
 
-# Teste TINNOVA &middot; 
+# Teste TINNOVA 
 
 > O Desafio
 Seu objetivo é criar um simples app que deve conter duas páginas, uma que exibe um
@@ -46,11 +46,13 @@ Rua Jurema Vieira Medrado, 88 | Sala 405 | São José dos Campos-SP | CEP 12246-
 ];
 
 </br>
-
-<img src="./assets/tinnova.gif" alt="Logo of the project" align="center">
-
+<div align="center">
+ 
+<img src="./assets/tinnova.gif" width="300" height="600" alt="Logo of the project" align="center">
+</div>
 </br>
-## O que foi feito
+
+# O que foi feito
 
 - No lugar de só salvar os dados localmente, cadastrei esses usuários em um banco de dados na núvem(Firebase). Podendo fazer o login com esses e-mails e CPFs, pode criar uma conta e pode fazer alteração de qualquer usuário.
 
@@ -106,4 +108,6 @@ Responsavel por salvar os dados para exibição e edição de novos usuários, c
 
 </br>
 
-<img src="./assets/Logo.png" alt="Logo of the project" align="center">
+<div align="center">
+<img src="./assets/Logo.png" width="400" height="150" alt="Logo of the project" align="center">
+ </div>
