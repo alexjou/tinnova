@@ -64,7 +64,7 @@ Rua Jurema Vieira Medrado, 88 | Sala 405 | São José dos Campos-SP | CEP 12246-
 
 # Link para download android
 
-- [APK](https://drive.google.com/file/d/1opA1HqCWsFycMf6S71ypMmAA14zmAtlO/view?usp=sharing)
+- [APK](https://drive.google.com/file/d/1luA4uBsM_3d6goBHZa0iLr7_0LMRNBtf/view?usp=sharing)
 
 </br>
 
