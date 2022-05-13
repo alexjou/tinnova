@@ -8,6 +8,10 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [allUsers, setAllUsers] = useState([]);
 
+  const getAllUser = async () => {
+    await getUsers().then((users) => setAllUsers(users))
+  };
+
   const login = async (email, cpf) => {
     try {
       return await fireAuth
@@ -19,7 +23,7 @@ export const AuthProvider = ({ children }) => {
             .get()
             .then(async (doc) => {
               setUser(doc.data());
-              await getUsers().then((users) => setAllUsers(users))
+              getAllUser();
               return true;
             })
         });
@@ -43,7 +47,7 @@ export const AuthProvider = ({ children }) => {
           phone: data.phone,
           created_at: new Date,
         });
-      await getUsers().then((users) => setAllUsers(users));
+      getAllUser();
       setUser(data);
       return true;
     } else {
@@ -88,7 +92,8 @@ export const AuthProvider = ({ children }) => {
         allUsers,
         setAllUsers,
         updateUser,
-        createUser
+        createUser,
+        getAllUser
       }}
     >
       {children}

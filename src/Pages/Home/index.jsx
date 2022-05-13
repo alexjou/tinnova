@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./styles";
 import { Text, View, TouchableOpacity, ScrollView } from "react-native";
 
@@ -6,11 +6,15 @@ import AuthContext from "../../contexts/auth";
 import { formataCPF, formatPhone } from "../../utils/utils";
 
 export default function Home({ navigation }) {
-  const { allUsers, signOut, user } = useContext(AuthContext);
+  const { allUsers, signOut, user, getAllUser } = useContext(AuthContext);
 
   const logOff = async () => {
     await signOut().then((doc) => { if (doc) { navigation.navigate("Login") } })
-  }
+  };
+
+  useEffect(() => {
+    getAllUser();
+  }, []);
 
   return (
     <ScrollView style={styles.container}>
@@ -25,7 +29,7 @@ export default function Home({ navigation }) {
 
       <View>
         {allUsers && allUsers?.map((item, index) => (
-          <TouchableOpacity onPress={() => navigation.navigate("SignIn", item)} key={index} style={styles.containerComponentCard}>
+          <TouchableOpacity onPress={() => navigation.navigate("AlterUser", item)} key={index} style={styles.containerComponentCard}>
             <View style={styles.componentCard}>
               <Text style={styles.title}>Nome</Text>
               <Text style={styles.description}>{item.name || "-"}</Text>

@@ -14,10 +14,11 @@ import { validateEmail } from "../../utils/utils";
 import AuthContext from "../../contexts/auth";
 
 
-export default function SignIn({ route, navigation }) {
+export default function AlterUser({ route, navigation }) {
   const { updateUser, createUser } = useContext(AuthContext);
 
   const data = route?.params;
+  console.log('props: ', data)
   const [isSubmiting, setSubmiting] = useState(false);
 
   const [form, setForm] = useState({
@@ -121,6 +122,7 @@ export default function SignIn({ route, navigation }) {
       cpf: "",
       phone: "",
     });
+    console.log('será?')
   }, [form]);
 
 

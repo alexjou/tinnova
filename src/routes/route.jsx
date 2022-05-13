@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../Pages/Home";
 import SignIn from '../Pages/SignIn';
 import Login from '../Pages/Login';
+import AlterUser from '../Pages/AlterUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ const Route = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="AlterUser" component={AlterUser} />
       </Stack.Navigator>
     </NavigationContainer>
   );
